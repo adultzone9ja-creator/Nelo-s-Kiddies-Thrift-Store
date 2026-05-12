@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-primary-400: #f472b6;
+  --color-primary-500: #ec4899;
+  --color-primary-600: #db2777;
+  --color-secondary-400: #8b5cf6;
+  --color-secondary-500: #7c3aed;
+  --color-secondary-600: #6d28d9;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  @apply text-gray-800 bg-gray-50;
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600;
+  }
+  .bg-brand-gradient {
+    @apply bg-gradient-to-br from-pink-500 to-purple-600;
+  }
+  .card-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  .rounded-brand {
+    border-radius: 1.25rem;
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(236, 72, 153, 0.1);
+  }
+}
